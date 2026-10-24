@@ -29,6 +29,35 @@ body{background:radial-gradient(ellipse at 82% 0%,#183b25 0,transparent 39%),rad
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.play{animation:none}.btn,.card,.sample,.hero-card,.logo img{transition:none}}
+
+/* FragStudio 2.1 — wygodna wersja mobilna */
+html{scroll-padding-top:110px}body{overflow-x:hidden}
+img,video,iframe{max-width:100%}
+@media(max-width:760px){
+  .wrap{width:min(100% - 32px,560px)}
+  .nav{padding:10px 0;gap:8px;flex-wrap:wrap}
+  .logo img{height:52px!important;max-width:155px!important}
+  nav{gap:4px;flex-wrap:wrap;justify-content:flex-end}
+  nav a{display:inline-flex;align-items:center;min-height:44px;padding:7px 9px;border-radius:9px;font-size:.85rem}
+  .hero{padding:35px 0 40px;gap:26px}
+  .hero h1{font-size:clamp(2.3rem,10vw,3.8rem);line-height:1.07;overflow-wrap:anywhere}
+  .lead{font-size:1rem}
+  .actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .actions .btn{width:100%;min-height:50px}
+  .hero-card{width:100%;max-width:100%;padding:18px;transform:none}
+  .section{padding:42px 0}
+  .grid,.portfolio,.steps,.contact{grid-template-columns:minmax(0,1fr)}
+  .card,.sample,.contact{min-width:0}
+  .contact .btn{width:100%;min-height:50px;text-align:center}
+  .tagrow{gap:7px}
+}
+@media(max-width:390px){
+  .nav{justify-content:center}
+  nav{width:100%;justify-content:space-around}
+  nav a:nth-child(2){display:inline-flex}
+  .logo img{height:48px!important}
+  .hero h1{font-size:clamp(2rem,10vw,2.8rem)}
+}
 </style>
 </head>
 <body>
